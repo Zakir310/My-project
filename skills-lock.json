@@ -25,12 +25,6 @@
       "skillPath": "skills/canvas-design/SKILL.md",
       "computedHash": "3fa7ea60170023ad8268bf9fd734ea75dd404279a2ef8ddf5abaa1102ad8e5f4"
     },
-    "claude-api": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/claude-api/SKILL.md",
-      "computedHash": "b0d8cf8ac6b744f9e8feb3aa0f5c8e2c621952974cd114bea4dbd009c57b2cf3"
-    },
     "deploy-to-vercel": {
       "source": "vercel-labs/agent-skills",
       "sourceType": "github",
@@ -48,12 +42,6 @@
       "sourceType": "github",
       "skillPath": "skills/doc-coauthoring/SKILL.md",
       "computedHash": "b964e4c3ffe13f66f76dd7919073e60c7aec622cd8a8363bb36323188100cf8e"
-    },
-    "docx": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/docx/SKILL.md",
-      "computedHash": "59c70107f8eae818bdfca7da685a6e4111aa519638b667775b794cb74987ec47"
     },
     "find-skills": {
       "source": "vercel-labs/skills",
@@ -78,24 +66,6 @@
       "sourceType": "github",
       "skillPath": "skills/mcp-builder/SKILL.md",
       "computedHash": "826e46adf81e1372282e205c34e1a2ee876e72148007726e4a2512599d2fef7b"
-    },
-    "pdf": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/pdf/SKILL.md",
-      "computedHash": "cfbc539377088ca7e44a813b30c306327385bbd973cd7a721e1743f60837dd62"
-    },
-    "pptx": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/pptx/SKILL.md",
-      "computedHash": "82eaf5daede5a1779aa17ccf06597cb209a0c2bd41d3a2f18bd45e0301a387fb"
-    },
-    "skill-creator": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/skill-creator/SKILL.md",
-      "computedHash": "5ea13a6d9f0d4bb694405d79acd00cadec0d21bb138c4dd10fcf3c500cb835c2"
     },
     "slack-gif-creator": {
       "source": "anthropics/skills",
@@ -174,12 +144,6 @@
       "sourceType": "github",
       "skillPath": "skills/writing-guidelines/SKILL.md",
       "computedHash": "e90462d4f801d823603b12c345ad0ff91a7489415274432681d21c7129123c26"
-    },
-    "xlsx": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/xlsx/SKILL.md",
-      "computedHash": "f5945e6e76dc7c178375e5cdf3140959b30cbcd4570ec3dc62296812259fc38d"
     }
   }
 }
