@@ -89,6 +89,16 @@ Avant de l'écraser, le script sauvegarde chaque fichier existant
   Modern* reste la base. Supprime le bloc `workbench.colorCustomizations`
   dans les réglages si tu veux enlever les couleurs perso.
 
+## Autocomplétion IA (GitHub Copilot)
+
+Pendant que tu tapes, Copilot propose la suite en gris : `Tab` pour accepter,
+`Échap` pour refuser. Connecte-toi avec ton compte GitHub (icône Copilot en
+bas). Gratuit avec une limite mensuelle, ou illimité avec le GitHub Student
+Developer Pack : https://education.github.com/pack
+
+Attention : aux examens Holberton, pas d'IA. Coupe Copilot quand tu
+t'entraînes (clic sur l'icône Copilot en bas > désactiver).
+
 ## Mode Emacs
 
 L'extension *Awesome Emacs Keymap* active les raccourcis Emacs dans VS Code

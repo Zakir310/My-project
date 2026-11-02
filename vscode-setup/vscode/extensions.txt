@@ -43,5 +43,8 @@ ms-python.python
 ms-python.autopep8
 # Design : icônes de fichiers minimalistes
 miguelsolorio.symbols
-# IA
+# IA : autocomplétion en gris pendant que tu tapes (Tab pour accepter)
+github.copilot
+github.copilot-chat
+# IA : Claude Code (explications, vérifications, gros changements)
 anthropic.claude-code

@@ -284,6 +284,16 @@
 
 	"todo-tree.general.tags": ["TODO", "FIXME", "BUG", "HACK"],
 
+	// ---------- Autocomplétion IA (GitHub Copilot) ----------
+	// Suggestion grise : Tab = accepter, Échap = refuser,
+	// Option+] / Option+[ = suggestion suivante / précédente.
+	// Pour couper : clic sur l'icône Copilot dans la barre du bas.
+	"editor.inlineSuggest.enabled": true,
+	"github.copilot.enable": {
+		"*": true,
+		"plaintext": false
+	},
+
 	// ---------- Divers ----------
 	"workbench.startupEditor": "none",
 	"explorer.confirmDragAndDrop": false
