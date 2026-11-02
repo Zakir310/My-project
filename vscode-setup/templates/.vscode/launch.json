@@ -1,0 +1,22 @@
+{
+	// F5 = compiler puis déboguer avec gdb (points d'arrêt, variables, pas à pas).
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "gdb: déboguer a.out",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${fileDirname}/a.out",
+			"args": [],
+			"cwd": "${fileDirname}",
+			"stopAtEntry": false,
+			"externalConsole": false,
+			"MIMode": "gdb",
+			"miDebuggerPath": "/usr/bin/gdb",
+			"preLaunchTask": "gcc: compiler (flags Holberton)",
+			"setupCommands": [
+				{ "text": "-enable-pretty-printing", "ignoreFailures": true }
+			]
+		}
+	]
+}

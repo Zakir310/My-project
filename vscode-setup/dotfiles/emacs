@@ -1,0 +1,30 @@
+;; ~/.emacs : réglages pour Holberton (style Betty)
+
+;; C : style noyau Linux, tabulations de 8
+(setq c-default-style "linux"
+      c-basic-offset 8)
+(setq-default indent-tabs-mode t
+              tab-width 8)
+
+;; Voir les espaces en trop et la limite des 80 colonnes
+(setq-default show-trailing-whitespace t)
+(setq-default fill-column 80)
+(add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
+
+;; Numéros de ligne, colonne, parenthèses
+(global-display-line-numbers-mode t)
+(column-number-mode t)
+(show-paren-mode t)
+
+;; Supprimer les espaces en fin de ligne à la sauvegarde
+(add-hook 'before-save-hook #'delete-trailing-whitespace)
+(setq require-final-newline t)
+
+;; Pas de fichiers de sauvegarde~ partout dans les projets
+(setq make-backup-files nil
+      auto-save-default nil)
+
+;; M-x compile avec les flags Holberton
+(setq compile-command
+      "gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o a.out")
+(global-set-key (kbd "<f5>") #'compile)

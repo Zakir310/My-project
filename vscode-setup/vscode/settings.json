@@ -1,0 +1,70 @@
+{
+	// ---------- Éditeur ----------
+	"editor.fontSize": 14,
+	"editor.rulers": [80],
+	"editor.renderWhitespace": "boundary",
+	"editor.minimap.enabled": false,
+	"editor.bracketPairColorization.enabled": true,
+	"editor.formatOnSave": false,
+	"files.trimTrailingWhitespace": true,
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"files.eol": "\n",
+	"files.autoSave": "onFocusChange",
+
+	// ---------- C (style Betty : tabulations de 8) ----------
+	"[c]": {
+		"editor.insertSpaces": false,
+		"editor.tabSize": 8,
+		"editor.detectIndentation": false,
+		"editor.defaultFormatter": "ms-vscode.cpptools"
+	},
+	"[cpp]": {
+		"editor.insertSpaces": false,
+		"editor.tabSize": 8
+	},
+	"C_Cpp.default.cStandard": "gnu89",
+	"C_Cpp.default.compilerPath": "/usr/bin/gcc",
+	"C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
+	"C_Cpp.clang_format_style": "file",
+	"C_Cpp.clang_format_fallbackStyle": "LLVM",
+	"files.associations": {
+		"*.h": "c"
+	},
+
+	// ---------- Shell ----------
+	"[shellscript]": {
+		"editor.insertSpaces": false,
+		"editor.tabSize": 8,
+		"editor.defaultFormatter": "foxundermoon.shell-format"
+	},
+	"shellcheck.enable": true,
+	"shellcheck.run": "onType",
+
+	// ---------- Terminal intégré ----------
+	"terminal.integrated.defaultProfile.linux": "bash",
+	"terminal.integrated.scrollback": 10000,
+	"terminal.integrated.copyOnSelection": true,
+
+	// ---------- Git ----------
+	"git.autofetch": true,
+	"git.confirmSync": false,
+	"git.enableSmartCommit": true,
+	"git.pruneOnFetch": true,
+
+	// ---------- Markdown / README ----------
+	"[markdown]": {
+		"editor.wordWrap": "on",
+		"files.trimTrailingWhitespace": false
+	},
+	"cSpell.language": "en,fr",
+
+	// ---------- Emacs keymap ----------
+	// L'extension emacs-mcx active les raccourcis Emacs (C-x C-s, C-a, C-e,
+	// C-k, C-y...). Pour revenir aux raccourcis classiques : désactive-la.
+	"emacs-mcx.killRingMax": 60,
+
+	// ---------- Divers ----------
+	"workbench.startupEditor": "none",
+	"explorer.confirmDragAndDrop": false
+}

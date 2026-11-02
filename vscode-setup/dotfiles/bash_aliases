@@ -1,0 +1,48 @@
+# ~/.bash_aliases : raccourcis pour Holberton
+
+# Compilation C avec les flags Holberton
+alias gccw='gcc -Wall -Werror -Wextra -pedantic -std=gnu89'
+alias gccg='gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -g'
+alias vg='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes'
+
+# Betty sur tous les fichiers C du dossier
+alias bettyall='betty *.c *.h 2>/dev/null || betty *.c'
+
+# Navigation
+alias ll='ls -alF'
+alias la='ls -A'
+alias ..='cd ..'
+alias ...='cd ../..'
+
+# Git
+alias gs='git status -sb'
+alias ga='git add'
+alias gc='git commit -m'
+alias gp='git push'
+alias gl='git log --oneline --graph --decorate -15'
+
+# Rendre exécutables tous les scripts du dossier
+alias chx='chmod u+x'
+
+# Ajouter, commiter et pousser en une commande : gacp "message"
+gacp() {
+	if [ -z "$1" ]; then
+		echo 'Usage: gacp "message de commit"'
+		return 1
+	fi
+	git add -A && git commit -m "$1" && git push
+}
+
+# Créer un dossier de projet avec README et .vscode prêts : newproj nom_projet
+newproj() {
+	if [ -z "$1" ]; then
+		echo 'Usage: newproj nom_du_dossier'
+		return 1
+	fi
+	mkdir -p "$1" && cd "$1" || return 1
+	[ -f README.md ] || printf '# %s\n' "$1" > README.md
+	if [ -d "$HOME/.holberton-templates" ]; then
+		cp -rn "$HOME/.holberton-templates/." .
+	fi
+	echo "Projet $1 prêt."
+}

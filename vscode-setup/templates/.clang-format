@@ -1,0 +1,16 @@
+# Proche du style Betty / noyau Linux (Shift+Alt+F pour formater).
+# Betty reste l'arbitre final : lance toujours la tâche "betty".
+BasedOnStyle: LLVM
+IndentWidth: 8
+TabWidth: 8
+UseTab: Always
+ColumnLimit: 80
+BreakBeforeBraces: Linux
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortBlocksOnASingleLine: false
+IndentCaseLabels: false
+PointerAlignment: Right
+SpaceBeforeParens: ControlStatements
+SortIncludes: false

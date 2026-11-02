@@ -1,0 +1,81 @@
+{
+	"Betty function": {
+		"prefix": "bfunc",
+		"description": "Fonction avec commentaire de documentation Betty",
+		"body": [
+			"/**",
+			" * ${1:name} - ${2:description}",
+			" * @${3:param}: ${4:description}",
+			" *",
+			" * Return: ${5:description}",
+			" */",
+			"${6:int} ${1:name}(${7:int ${3:param}})",
+			"{",
+			"\t$0",
+			"}"
+		]
+	},
+	"Betty main": {
+		"prefix": "bmain",
+		"description": "main documenté Betty",
+		"body": [
+			"#include <stdio.h>",
+			"",
+			"/**",
+			" * main - ${1:entry point}",
+			" *",
+			" * Return: Always 0 (Success)",
+			" */",
+			"int main(void)",
+			"{",
+			"\t$0",
+			"\treturn (0);",
+			"}"
+		]
+	},
+	"Header guard": {
+		"prefix": "bheader",
+		"description": "Fichier .h avec include guard",
+		"body": [
+			"#ifndef ${1:${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_H}",
+			"#define ${1}",
+			"",
+			"$0",
+			"",
+			"#endif /* ${1} */"
+		]
+	},
+	"Betty struct": {
+		"prefix": "bstruct",
+		"description": "Structure documentée Betty",
+		"body": [
+			"/**",
+			" * struct ${1:name} - ${2:description}",
+			" * @${3:member}: ${4:description}",
+			" */",
+			"typedef struct ${1:name}",
+			"{",
+			"\t${5:int} ${3:member};",
+			"} ${1:name}_t;"
+		]
+	},
+	"_putchar": {
+		"prefix": "bputchar",
+		"description": "_putchar Holberton",
+		"body": [
+			"#include <unistd.h>",
+			"",
+			"/**",
+			" * _putchar - writes the character c to stdout",
+			" * @c: The character to print",
+			" *",
+			" * Return: On success 1.",
+			" * On error, -1 is returned, and errno is set appropriately.",
+			" */",
+			"int _putchar(char c)",
+			"{",
+			"\treturn (write(1, &c, 1));",
+			"}"
+		]
+	}
+}

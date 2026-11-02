@@ -1,0 +1,77 @@
+# Configuration VS Code pour Holberton
+
+VS Code configuré pour le C (gcc, Betty, gdb, valgrind), le shell, Git et
+Emacs, avec Claude Code.
+
+## Installation (une seule commande)
+
+Sous Linux, ou sous Windows dans **WSL Ubuntu** :
+
+```bash
+git clone https://github.com/Zakir310/My-project.git
+cd My-project/vscode-setup
+./install.sh
+```
+
+Pas de droits `sudo` ? Lance `./install.sh --no-apt`.
+
+Avant de l'écraser, le script sauvegarde chaque fichier existant
+(`settings.json`, `.emacs`, `.bash_aliases`) en `*.bak.<date>`.
+
+> **Sous WSL** : ouvre VS Code depuis le terminal Ubuntu avec `code .`. Pour
+> appliquer les réglages côté Windows aussi : `Ctrl+Shift+P` >
+> *Preferences: Open User Settings (JSON)*, puis colle le contenu de
+> `vscode/settings.json`.
+
+## Ce qui est installé
+
+| Domaine | Contenu |
+|---|---|
+| Outils | gcc, gdb, valgrind, emacs, git, shellcheck, clang-format, Betty |
+| Extensions | C/C++, Makefile, ShellCheck, shell-format, GitLens, Git Graph, Emacs keymap, Error Lens, EditorConfig, correcteur FR/EN, Markdown, WSL/SSH, Claude Code |
+| Réglages | tabulations de 8 en C et shell, règle à 80 colonnes, `gnu89`, suppression des espaces en fin de ligne, nouvelle ligne finale |
+| Snippets | `bmain`, `bfunc`, `bstruct`, `bheader`, `bputchar` (C), `bash` (shell) |
+| Emacs | `~/.emacs` au style Linux/Betty, `F5` compile avec les flags Holberton |
+| Bash | alias `gccw`, `gccg`, `vg`, `bettyall`, `gs`, `gl`, `gacp "msg"`, `newproj nom` |
+| Git | alias `git st`, `git lg`, `git undo`, branche `main` par défaut |
+| Claude Code | `~/.claude/CLAUDE.md` (règles Holberton) + skill `/holberton-check` |
+
+## Utilisation au quotidien
+
+1. `newproj holbertonschool-low_level_programming/0x02-functions` crée le
+   dossier, le README, `.vscode/`, `.clang-format` et `.editorconfig`.
+2. `code .` pour ouvrir le projet.
+3. Tape `bmain` ou `bfunc` puis `Tab` pour avoir le squelette Betty.
+4. Raccourcis :
+
+| Action | Raccourci |
+|---|---|
+| Compiler (flags Holberton) | `Ctrl+Shift+B` |
+| Déboguer avec gdb | `F5` |
+| Betty / valgrind / shellcheck | `Ctrl+Shift+P` > *Run Task* |
+| Formater (proche de Betty) | `Shift+Alt+F` |
+| Terminal intégré | ``Ctrl+` `` |
+| Git (stage, commit, push) | `Ctrl+Shift+G` |
+
+5. Les erreurs de Betty et gcc s'affichent directement dans l'onglet
+   *Problèmes* et sur les lignes concernées (Error Lens).
+6. Avant de pousser, dans Claude Code : `/holberton-check`.
+7. `gacp "Add task 0"` pour ajouter, commiter et pousser.
+
+## Mode Emacs
+
+L'extension *Awesome Emacs Keymap* active les raccourcis Emacs dans VS Code
+(`C-x C-s` sauver, `C-a`/`C-e` début/fin de ligne, `C-k` couper, `C-y` coller,
+`C-s` chercher). C'est utile pour s'entraîner aux examens qui se font dans le
+terminal. Pour revenir aux raccourcis classiques, désactive l'extension.
+
+## Structure
+
+```
+vscode-setup/
+├── install.sh
+├── vscode/        settings.json, extensions.txt, snippets/
+├── templates/     .vscode/ (tasks, launch), .clang-format, .editorconfig
+├── dotfiles/      emacs, bash_aliases, gitconfig-extra
+└── claude/        CLAUDE.md, skills/holberton-check/
+```

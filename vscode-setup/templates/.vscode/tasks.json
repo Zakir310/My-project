@@ -1,0 +1,69 @@
+{
+	// À copier dans le dossier .vscode/ de chaque projet.
+	// Ctrl+Shift+B = compiler ; Ctrl+Shift+P > "Run Task" pour les autres.
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "gcc: compiler (flags Holberton)",
+			"type": "shell",
+			"command": "gcc",
+			"args": [
+				"-Wall", "-Werror", "-Wextra", "-pedantic", "-std=gnu89", "-g",
+				"*.c", "-o", "a.out"
+			],
+			"options": { "cwd": "${fileDirname}", "shell": { "executable": "bash", "args": ["-c"] } },
+			"group": { "kind": "build", "isDefault": true },
+			"problemMatcher": ["$gcc"]
+		},
+		{
+			"label": "gcc: compiler et lancer",
+			"type": "shell",
+			"command": "gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -g *.c -o a.out && ./a.out",
+			"options": { "cwd": "${fileDirname}" },
+			"problemMatcher": ["$gcc"]
+		},
+		{
+			"label": "betty: vérifier le fichier courant",
+			"type": "shell",
+			"command": "betty",
+			"args": ["${file}"],
+			"problemMatcher": {
+				"owner": "betty",
+				"fileLocation": "absolute",
+				"pattern": {
+					"regexp": "^(.+):(\\d+): (WARNING|ERROR): (.*)$",
+					"file": 1, "line": 2, "severity": 3, "message": 4
+				}
+			}
+		},
+		{
+			"label": "betty: vérifier tout le dossier",
+			"type": "shell",
+			"command": "betty *.c *.h 2>/dev/null || betty *.c",
+			"options": { "cwd": "${fileDirname}" },
+			"problemMatcher": {
+				"owner": "betty",
+				"fileLocation": ["relative", "${fileDirname}"],
+				"pattern": {
+					"regexp": "^(.+):(\\d+): (WARNING|ERROR): (.*)$",
+					"file": 1, "line": 2, "severity": 3, "message": 4
+				}
+			}
+		},
+		{
+			"label": "valgrind: fuites mémoire",
+			"type": "shell",
+			"command": "valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./a.out",
+			"options": { "cwd": "${fileDirname}" },
+			"dependsOn": "gcc: compiler (flags Holberton)",
+			"problemMatcher": []
+		},
+		{
+			"label": "shellcheck: script courant",
+			"type": "shell",
+			"command": "shellcheck",
+			"args": ["-f", "gcc", "${file}"],
+			"problemMatcher": ["$gcc"]
+		}
+	]
+}

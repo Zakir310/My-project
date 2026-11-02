@@ -1,0 +1,24 @@
+# C / compilation / debug
+ms-vscode.cpptools
+ms-vscode.makefile-tools
+# Shell
+timonwong.shellcheck
+foxundermoon.shell-format
+# Git
+eamodio.gitlens
+mhutchie.git-graph
+# Emacs : raccourcis Emacs dans VS Code (pour l'entraînement aux examens)
+tuttieee.emacs-mcx
+# Qualité / confort
+usernamehw.errorlens
+editorconfig.editorconfig
+streetsidesoftware.code-spell-checker
+streetsidesoftware.code-spell-checker-french
+# README / Markdown
+yzhang.markdown-all-in-one
+davidanson.vscode-markdownlint
+# Travail à distance (WSL, serveurs, conteneurs Holberton)
+ms-vscode-remote.remote-wsl
+ms-vscode-remote.remote-ssh
+# IA
+anthropic.claude-code
