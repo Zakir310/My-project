@@ -22,5 +22,26 @@ davidanson.vscode-markdownlint
 # Travail à distance (WSL, serveurs, conteneurs Holberton)
 ms-vscode-remote.remote-wsl
 ms-vscode-remote.remote-ssh
+# Lancer un fichier en un clic (bouton ▶, réglé avec les flags Holberton)
+formulahendry.code-runner
+# Shell : autocomplétion, aide sur les commandes, aller à la définition
+mads-hartmann.bash-ide-vscode
+# Lisibilité : niveaux d'indentation colorés, icônes de fichiers, TODO
+oderwat.indent-rainbow
+pkief.material-icon-theme
+gruntfuggly.todo-tree
+christian-kohler.path-intellisense
+# Bas niveau : voir un fichier binaire en hexadécimal
+ms-vscode.hexeditor
+# Peer learning : coder à plusieurs sur le même fichier en direct
+ms-vsliveshare.vsliveshare
+# GitHub : pull requests et issues dans VS Code
+github.vscode-pull-request-github
+# Web (ton portfolio) : aperçu en direct + formatage HTML/CSS/JS
+ritwickdey.liveserver
+esbenp.prettier-vscode
+# Python (plus tard dans le cursus) : pycodestyle via autopep8
+ms-python.python
+ms-python.autopep8
 # IA
 anthropic.claude-code

@@ -43,7 +43,7 @@ Avant de l'écraser, le script sauvegarde chaque fichier existant
 | Domaine | Contenu |
 |---|---|
 | Outils | gcc, gdb, valgrind, emacs, git, shellcheck, clang-format, Betty |
-| Extensions | C/C++, Makefile, ShellCheck, shell-format, GitLens, Git Graph, Emacs keymap, Error Lens, EditorConfig, correcteur FR/EN, Markdown, WSL/SSH, Claude Code |
+| Extensions | C/C++, CodeLLDB, Makefile, ShellCheck, shell-format, Bash IDE, Code Runner, GitLens, Git Graph, GitHub PR, Emacs keymap, Error Lens, indent-rainbow, Todo Tree, Material Icons, Hex Editor, Live Share, Live Server, Prettier, Python, autopep8, Markdown, correcteur FR/EN, SSH/WSL, Claude Code |
 | Réglages | tabulations de 8 en C et shell, règle à 80 colonnes, `gnu89`, suppression des espaces en fin de ligne, nouvelle ligne finale |
 | Snippets | `bmain`, `bfunc`, `bstruct`, `bheader`, `bputchar` (C), `bash` (shell) |
 | Emacs | `~/.emacs` au style Linux/Betty, `F5` compile avec les flags Holberton |
@@ -62,6 +62,9 @@ Avant de l'écraser, le script sauvegarde chaque fichier existant
 | Action | Raccourci |
 |---|---|
 | Compiler (flags Holberton) | `Ctrl+Shift+B` |
+| Compiler et lancer en un clic | bouton ▶ (Code Runner) ou `Ctrl+Alt+N` |
+| Voir le portfolio en direct | clic droit sur `index.html` > *Open with Live Server* |
+| Coder à deux (peer learning) | Live Share dans la barre du bas |
 | Déboguer avec gdb | `F5` |
 | Betty / valgrind / shellcheck | `Ctrl+Shift+P` > *Run Task* |
 | Formater (proche de Betty) | `Shift+Alt+F` |

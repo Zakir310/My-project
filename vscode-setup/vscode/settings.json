@@ -67,6 +67,33 @@
 	// C-k, C-y...). Pour revenir aux raccourcis classiques : désactive-la.
 	"emacs-mcx.killRingMax": 60,
 
+	// ---------- Code Runner (bouton ▶ en haut à droite) ----------
+	"code-runner.executorMap": {
+		"c": "cd $dir && gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o a.out && ./a.out",
+		"shellscript": "bash",
+		"python": "python3 -u"
+	},
+	"code-runner.runInTerminal": true,
+	"code-runner.saveFileBeforeRun": true,
+	"code-runner.clearPreviousOutput": true,
+
+	// ---------- Python (style pycodestyle exigé à Holberton) ----------
+	"[python]": {
+		"editor.rulers": [79],
+		"editor.insertSpaces": true,
+		"editor.tabSize": 4,
+		"editor.defaultFormatter": "ms-python.autopep8"
+	},
+
+	// ---------- Web ----------
+	"[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+	"[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+	"[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+	// ---------- Apparence ----------
+	"workbench.iconTheme": "material-icon-theme",
+	"todo-tree.general.tags": ["TODO", "FIXME", "BUG", "HACK"],
+
 	// ---------- Divers ----------
 	"workbench.startupEditor": "none",
 	"explorer.confirmDragAndDrop": false
