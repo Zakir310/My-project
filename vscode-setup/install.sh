@@ -50,8 +50,9 @@ elif [ "$OS" = "Darwin" ]; then
 
 	info "Installation des outils (gcc, emacs, git, shellcheck...)"
 	brew install gcc emacs git shellcheck clang-format
-	info "Police JetBrains Mono (design VS Code)"
-	brew install --cask font-jetbrains-mono || warn "Police non installée"
+	info "Polices Geist Mono et JetBrains Mono (design VS Code)"
+	brew install --cask font-geist-mono font-jetbrains-mono ||
+		warn "Police non installée"
 
 	# Sur Mac, "gcc" lance clang. On fait pointer "gcc" vers le vrai GCC.
 	GCCV="$(find "$BREW/bin" -maxdepth 1 -name 'gcc-[0-9]*' | sort -V | tail -1)"

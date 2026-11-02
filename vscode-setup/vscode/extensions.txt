@@ -26,9 +26,7 @@ ms-vscode-remote.remote-ssh
 formulahendry.code-runner
 # Shell : autocomplétion, aide sur les commandes, aller à la définition
 mads-hartmann.bash-ide-vscode
-# Lisibilité : niveaux d'indentation colorés, icônes de fichiers, TODO
-oderwat.indent-rainbow
-pkief.material-icon-theme
+# Lisibilité : liste des TODO
 gruntfuggly.todo-tree
 christian-kohler.path-intellisense
 # Bas niveau : voir un fichier binaire en hexadécimal
@@ -43,10 +41,7 @@ esbenp.prettier-vscode
 # Python (plus tard dans le cursus) : pycodestyle via autopep8
 ms-python.python
 ms-python.autopep8
-# Design : thèmes (change avec Cmd+K puis Cmd+T)
-enkia.tokyo-night
-catppuccin.catppuccin-vsc
-github.github-vscode-theme
-zhuangtongfa.material-theme
+# Design : icônes de fichiers minimalistes
+miguelsolorio.symbols
 # IA
 anthropic.claude-code

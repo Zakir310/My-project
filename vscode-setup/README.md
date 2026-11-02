@@ -76,15 +76,18 @@ Avant de l'écraser, le script sauvegarde chaque fichier existant
 6. Avant de pousser, dans Claude Code : `/holberton-check`.
 7. `gacp "Add task 0"` pour ajouter, commiter et pousser.
 
-## Design
+## Design : noir minimaliste
 
-- Thème **Tokyo Night** (bleu nuit) avec des touches du bleu du portfolio
-  (`#3B6BFF`) : curseur, badges, bordures.
-- Police **JetBrains Mono** avec ligatures (`!=`, `->`, `<=` deviennent des
-  symboles).
-- Curseur et défilement fluides, icônes Material, interface épurée.
-- Autres thèmes déjà installés : *Catppuccin Mocha*, *GitHub Dark Default*,
-  *One Dark Pro*. Pour changer : `Cmd+K` puis `Cmd+T` (`Ctrl` sous Linux).
+- Thème sur mesure aux couleurs du portfolio : fond `#04060B`, texte blanc
+  cassé, mots-clés en bleu `#3B6BFF`, commentaires gris en italique.
+- Construit sur le thème intégré *Default Dark Modern* : aucune extension de
+  thème à installer.
+- Police **Geist Mono** (repli : JetBrains Mono, puis Menlo).
+- Pas d'arc-en-ciel ni de bordures inutiles. Icônes sobres (*Symbols*),
+  défilement et curseur fluides.
+- Pour revenir au thème d'origine : `Cmd+K` puis `Cmd+T` > *Default Dark
+  Modern* reste la base. Supprime le bloc `workbench.colorCustomizations`
+  dans les réglages si tu veux enlever les couleurs perso.
 
 ## Mode Emacs
 
