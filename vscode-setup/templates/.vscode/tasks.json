@@ -54,6 +54,8 @@
 			"label": "valgrind: fuites mémoire",
 			"type": "shell",
 			"command": "valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./a.out",
+			// valgrind n'existe pas sur Mac : on utilise l'outil leaks d'Apple
+			"osx": { "command": "leaks --atExit -- ./a.out" },
 			"options": { "cwd": "${fileDirname}" },
 			"dependsOn": "gcc: compiler (flags Holberton)",
 			"problemMatcher": []

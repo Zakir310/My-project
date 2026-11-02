@@ -5,7 +5,8 @@ Emacs, avec Claude Code.
 
 ## Installation (une seule commande)
 
-Sous Linux, ou sous Windows dans **WSL Ubuntu** :
+Sur **macOS**, sous Linux ou sous Windows dans **WSL Ubuntu**, dans le
+Terminal :
 
 ```bash
 git clone https://github.com/Zakir310/My-project.git
@@ -13,7 +14,21 @@ cd My-project/vscode-setup
 ./install.sh
 ```
 
-Pas de droits `sudo` ? Lance `./install.sh --no-apt`.
+Pas de droits administrateur ? Lance `./install.sh --no-sys`.
+
+### Spécificités macOS
+
+- Le script installe les *Command Line Tools* d'Apple, puis
+  [Homebrew](https://brew.sh), puis GCC, Emacs et shellcheck.
+- Sur Mac, `gcc` lance clang. Le script fait donc pointer `gcc` vers le vrai
+  GCC de Homebrew, comme à Holberton.
+- Il n'y a pas de gdb ni de valgrind sur les Mac récents. Le kit utilise
+  **lldb** (extension CodeLLDB) pour déboguer avec `F5`, et l'outil
+  **leaks** d'Apple à la place de valgrind (alias `vg`).
+- Les raccourcis VS Code utilisent `Cmd` au lieu de `Ctrl` pour
+  `Cmd+Shift+B` et `Cmd+Shift+P`.
+- La correction de Holberton tourne sous Ubuntu : pour les exercices mémoire
+  (valgrind), vérifie aussi dans le sandbox Holberton.
 
 Avant de l'écraser, le script sauvegarde chaque fichier existant
 (`settings.json`, `.emacs`, `.bash_aliases`) en `*.bak.<date>`.

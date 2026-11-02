@@ -1,6 +1,8 @@
 # C / compilation / debug
 ms-vscode.cpptools
 ms-vscode.makefile-tools
+# Débogueur lldb (indispensable sur Mac, gdb n'y fonctionne pas)
+vadimcn.vscode-lldb
 # Shell
 timonwong.shellcheck
 foxundermoon.shell-format

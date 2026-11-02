@@ -3,7 +3,12 @@
 # Compilation C avec les flags Holberton
 alias gccw='gcc -Wall -Werror -Wextra -pedantic -std=gnu89'
 alias gccg='gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -g'
-alias vg='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes'
+if [ "$(uname -s)" = "Darwin" ]; then
+	# Pas de valgrind sur Mac : leaks (fourni par Apple) détecte les fuites
+	alias vg='leaks --atExit --'
+else
+	alias vg='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes'
+fi
 
 # Betty sur tous les fichiers C du dossier
 alias bettyall='betty *.c *.h 2>/dev/null || betty *.c'

@@ -1,9 +1,19 @@
 {
-	// F5 = compiler puis déboguer avec gdb (points d'arrêt, variables, pas à pas).
+	// F5 = compiler puis déboguer (points d'arrêt, variables, pas à pas).
+	// Choisis la config dans l'onglet Exécuter : lldb sur Mac, gdb sur Linux.
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "gdb: déboguer a.out",
+			"name": "lldb: déboguer a.out (Mac)",
+			"type": "lldb",
+			"request": "launch",
+			"program": "${fileDirname}/a.out",
+			"args": [],
+			"cwd": "${fileDirname}",
+			"preLaunchTask": "gcc: compiler (flags Holberton)"
+		},
+		{
+			"name": "gdb: déboguer a.out (Linux)",
 			"type": "cppdbg",
 			"request": "launch",
 			"program": "${fileDirname}/a.out",

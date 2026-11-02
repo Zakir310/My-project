@@ -24,8 +24,8 @@
 		"editor.tabSize": 8
 	},
 	"C_Cpp.default.cStandard": "gnu89",
+	// Remplacé par install.sh (sur Mac : le gcc de Homebrew)
 	"C_Cpp.default.compilerPath": "/usr/bin/gcc",
-	"C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
 	"C_Cpp.clang_format_style": "file",
 	"C_Cpp.clang_format_fallbackStyle": "LLVM",
 	"files.associations": {
@@ -43,6 +43,9 @@
 
 	// ---------- Terminal intégré ----------
 	"terminal.integrated.defaultProfile.linux": "bash",
+	"terminal.integrated.defaultProfile.osx": "zsh",
+	// Sur Mac : Option sert de touche Meta (M-x, M-f...) dans le terminal
+	"terminal.integrated.macOptionIsMeta": true,
 	"terminal.integrated.scrollback": 10000,
 	"terminal.integrated.copyOnSelection": true,
 
