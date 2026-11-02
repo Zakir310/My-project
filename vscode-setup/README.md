@@ -76,6 +76,16 @@ Avant de l'écraser, le script sauvegarde chaque fichier existant
 6. Avant de pousser, dans Claude Code : `/holberton-check`.
 7. `gacp "Add task 0"` pour ajouter, commiter et pousser.
 
+## Design
+
+- Thème **Tokyo Night** (bleu nuit) avec des touches du bleu du portfolio
+  (`#3B6BFF`) : curseur, badges, bordures.
+- Police **JetBrains Mono** avec ligatures (`!=`, `->`, `<=` deviennent des
+  symboles).
+- Curseur et défilement fluides, icônes Material, interface épurée.
+- Autres thèmes déjà installés : *Catppuccin Mocha*, *GitHub Dark Default*,
+  *One Dark Pro*. Pour changer : `Cmd+K` puis `Cmd+T` (`Ctrl` sous Linux).
+
 ## Mode Emacs
 
 L'extension *Awesome Emacs Keymap* active les raccourcis Emacs dans VS Code

@@ -50,6 +50,8 @@ elif [ "$OS" = "Darwin" ]; then
 
 	info "Installation des outils (gcc, emacs, git, shellcheck...)"
 	brew install gcc emacs git shellcheck clang-format
+	info "Police JetBrains Mono (design VS Code)"
+	brew install --cask font-jetbrains-mono || warn "Police non installée"
 
 	# Sur Mac, "gcc" lance clang. On fait pointer "gcc" vers le vrai GCC.
 	GCCV="$(find "$BREW/bin" -maxdepth 1 -name 'gcc-[0-9]*' | sort -V | tail -1)"
@@ -63,6 +65,8 @@ elif command -v apt-get >/dev/null; then
 	sudo apt-get update
 	sudo apt-get install -y build-essential gdb valgrind emacs-nox git \
 		shellcheck clang-format perl man-db manpages-dev curl
+	sudo apt-get install -y fonts-jetbrains-mono ||
+		warn "Police JetBrains Mono non installée (optionnelle)"
 else
 	warn "Gestionnaire de paquets inconnu : installe gcc, emacs, git, shellcheck à la main"
 fi

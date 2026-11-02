@@ -1,6 +1,38 @@
 {
-	// ---------- Éditeur ----------
+	// ---------- Design ----------
+	// Autres thèmes installés : "Catppuccin Mocha", "GitHub Dark Default",
+	// "One Dark Pro". Pour changer : Cmd+K puis Cmd+T.
+	"workbench.colorTheme": "Tokyo Night",
+	"editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
+	"editor.fontLigatures": true,
 	"editor.fontSize": 14,
+	"editor.lineHeight": 1.6,
+	"terminal.integrated.fontFamily": "'JetBrains Mono', Menlo, monospace",
+	"terminal.integrated.fontSize": 13,
+	"editor.cursorBlinking": "smooth",
+	"editor.cursorSmoothCaretAnimation": "on",
+	"editor.cursorStyle": "line",
+	"editor.smoothScrolling": true,
+	"workbench.list.smoothScrolling": true,
+	"editor.guides.bracketPairs": "active",
+	"editor.renderLineHighlight": "all",
+	"editor.padding.top": 12,
+	"window.commandCenter": true,
+	"workbench.tree.indent": 14,
+	"workbench.layoutControl.enabled": false,
+	"breadcrumbs.enabled": true,
+	// Petits accents au bleu de ton portfolio (#3B6BFF)
+	"workbench.colorCustomizations": {
+		"[Tokyo Night]": {
+			"editorCursor.foreground": "#3B6BFF",
+			"activityBarBadge.background": "#3B6BFF",
+			"statusBarItem.remoteBackground": "#3B6BFF",
+			"focusBorder": "#3B6BFF80",
+			"editorRuler.foreground": "#26304D"
+		}
+	},
+
+	// ---------- Éditeur ----------
 	"editor.rulers": [80],
 	"editor.renderWhitespace": "boundary",
 	"editor.minimap.enabled": false,
